@@ -1,0 +1,2 @@
+How to create button?
+<button>content</button> 

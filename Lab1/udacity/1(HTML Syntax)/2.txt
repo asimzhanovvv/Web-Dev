@@ -1,0 +1,9 @@
+Consider each of the following chunks of HTML. Which are formatted incorrectly? That is, which ones look wrong and need their HTML corrected?
+
+Correct:
+1. <p><em>words, words, wrods.</em></p>
+
+Wrong:
+1. <p>a paragraph<p>
+2. <span...middle of the sentence...</span>
+3. <p><em>words, words, wrods.</p></em>
