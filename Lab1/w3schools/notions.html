@@ -1,0 +1,918 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>W3school</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2f47f8a1-6682-8082-bfc7-c194cfd7955d" class="page sans"><header><h1 class="page-title" dir="auto">W3school</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Introduction</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8071-a11a-cfdf4007b503" class="numbered-list" start="1"><li>What does HTML stand for?<br/>Hyper Text Markup Language</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80ca-9c9e-e81807d1f4a5" class="numbered-list" start="2"><li>Which one of the following headers has the correct HTML syntax?<br/>&lt;h1&gt;Welcome&lt;/h1&gt;</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8031-a49d-ff37fa92a7a0" class="numbered-list" start="3"><li>Who invented HTML?<br/>Tim Berners-Lee</li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Basic</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8009-b388-f65221b98ecc" class="numbered-list" start="1"><li>What is a correct HTML markup for the document type declaration?<br/>&lt;!DOCTYPE html&gt;</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80dd-9a9c-e24f2a3293a0" class="numbered-list" start="2"><li>Place the start- and end-tags in the correct positions.<div style="display:contents" dir="ltr"><figure id="2f47f8a1-6682-8026-b108-e09a797032c7" class="image"><a href="image.png"><img style="width:653.96875px" src="image.png"/></a></figure></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80ab-9c95-ddcb123a0d4e" class="numbered-list" start="3"><li>HTML elements are surrounded by a specific type of brackets, which one?<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8028-8628-f05469586dfa" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8023-9a39-fd28d7182c22" class="numbered-list" start="4"><li>Fill in the missing code to complete the markup of the HTML hyperlink.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80fa-86c7-ee932425aeb7" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all"> &lt;a href=&quot;https://www.w3schools.com&quot;&gt;This is a link &lt;/a&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Elements</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80e3-8b05-e317e3195616" class="numbered-list" start="1"><li>True or False. Empty elements must have a close tag.<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-80f6-a382-cd9f5f03442b" class="">False</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8036-8176-e14d5e133979" class="numbered-list" start="2"><li>Insert the correct end tag for the HTML heading.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80f9-88e1-d12da6ee5cb2" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;This is a heading&lt;h1&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-803d-972e-e12e36ced622" class="numbered-list" start="3"><li>Insert the correct end tags in this HTML document:<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80ee-a61c-cb0d9b68efbe" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;html&gt;
+
+&lt;body&gt;
+
+&lt;h4&gt;This is a heading&lt;/h4&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/html&gt;
+
+&lt;/body&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Attributes</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80b9-9a9b-f35c4dd8e5fa" class="numbered-list" start="1"><li>Which of the following is a correct syntax for using an HTML attribute?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-808c-9c15-c125c36dc5ca" class="">&lt;img src=&#x27;img_girl.jpg&#x27;&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-804d-9678-f7ccc6ce9e22" class="numbered-list" start="2"><li>Add a &quot;tooltip&quot; to the paragraph below with the text &quot;About W3Schools&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80c7-b538-eac86191cc91" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p title=&quot;About W3Schools&quot;&gt;W3Schools is a web developer&#x27;s site.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80f5-9b73-dad4e69cb108" class="numbered-list" start="3"><li>Set the size of the image to 250 pixels wide and 400 pixels tall.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80b7-8e9b-f96ec90ec961" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;w3schools.jpg&quot; width=&quot;250&quot; height=&quot;400&quot;&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80c3-8794-ca1379003821" class="numbered-list" start="4"><li>Make the element below into a link that goes to &quot;https://www.w3schools.com&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8016-8cc1-d0795775150d" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;https://www.w3schools.com&quot;&gt;This is a link&lt;/a&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8018-97f2-d9058b5bd68c" class="numbered-list" start="5"><li>Specify an alternate text for the image. Alternate text is useful when the image cannot be displayed, like when the page is read by a screen reader.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80fa-8b9e-d7aac11fca1e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;w3schools.png&quot; alt=&quot;w3schools Logo&quot;&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Headings</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8079-95a8-ffa2bc000da7" class="numbered-list" start="1"><li>Which of the following headers is the largest and most important header?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-8036-96eb-ca082718bcfd" class="">&lt;h1&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80b0-931a-c7f70591858a" class="numbered-list" start="2"><li>Use the correct HTML tag to add a heading with the text &quot;London&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8062-ac91-eb6a58994d9e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;London&lt;/h1&gt;
+&lt;p&gt;London is the capital city of England.
+It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80ab-b88b-eda45e98bf1f" class="numbered-list" start="3"><li>Add six headings to the document with the text &quot;Hello&quot;. Start with the most important heading (the largest) and end with the least important heading (the smallest).<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80f1-8b87-e2df8cb44525" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello&lt;/h1&gt;
+&lt;h2&gt;Hello&lt;/h2&gt;
+&lt;h3&gt;Hello&lt;/h3&gt;
+&lt;h4&gt;Hello&lt;/h4&gt;
+&lt;h5&gt;Hello&lt;/h5&gt;
+&lt;h6&gt;Hello&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Paragraphs</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-808a-9f96-efee5d67201c" class="numbered-list" start="1"><li>True or False. HTML paragraphs always starts on a new line.<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-8051-adb7-d9ce147ca0b7" class="">True</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-809e-abd2-dc1e52e0c885" class="numbered-list" start="2"><li>Use the correct HTML tag to add a paragraph with the text &quot;Hello World!&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8082-bc2c-cb511c271d8e" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;Hello World!&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8015-924b-c9cccebf923a" class="numbered-list" start="3"><li>Clean up this document with proper end tags.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8003-895d-c05d29b1def4" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;This is a Heading&lt;/h1&gt;
+
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8068-8209-c5e549616a46" class="numbered-list" start="4"><li>Add a horizontal rule between the heading and the paragraph.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80ce-bb27-f573bbc3ff44" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;London&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;London is the capital city of England.
+It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8024-a91a-da90d919f952" class="numbered-list" start="5"><li>Add a line break in the middle of the paragraph:<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8060-9860-f132575571af" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;My Bonnie lies&lt;br&gt;over the ocean.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80c6-b803-df0918caff70" class="numbered-list" start="6"><li>Wrap this poem around HTML tags that will preserve all spaces and linebreaks when the element is displayed.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80ea-a6ad-cfc0d5f47ab1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;pre&gt;
+	My Bonnie lies over the ocean.
+  My Bonnie lies over the sea.
+  My Bonnie lies over the ocean.
+  Oh, bring back my Bonnie to me.
+&lt;/pre&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Styles</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8052-bd4c-dd6d293c9620" class="numbered-list" start="1"><li>What is a correct way to add a background color to an HTML document?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-8039-a389-cd29e3841947" class=""><code>&lt;body style=&#x27;background-color:pink;&#x27;&gt;</code> </p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8052-a5e2-c0e660552e26" class="numbered-list" start="2"><li>Use the correct HTML attribute, and CSS, to set the color of the paragraph to &quot;blue&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8024-acbd-fa6f44d23eaa" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;color:blue;&quot;&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-806b-b4e2-d13cbd7b356d" class="numbered-list" start="3"><li>Use CSS to set the font of the paragraph to &quot;courier&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8001-a7ca-e4e58acd4ed3" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;font-family:courier;&quot;&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8010-a426-ed2634ce5f3b" class="numbered-list" start="4"><li>Use CSS to center align the paragraph.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80b7-a28d-dcfed3edcbd7" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;text-align:center;&quot;&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80b4-97ed-ef334c455ce8" class="numbered-list" start="5"><li>Use CSS to set the text size to 50 pixels.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80d1-ba35-ec54d0ae0a96" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;font-size:50px;&quot;&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-809a-8c10-e0f84b7a7852" class="numbered-list" start="6"><li>Use CSS to set the background color of the document to yellow.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80e4-a7d0-c88b6615c3fb" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;html&gt;
+
+&lt;body style=&quot;background-color:yellow;&quot;&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8043-9711-fc7418cf1007" class="numbered-list" start="7"><li>Use CSS to center align the document.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8007-b445-d5f5149ece7e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;html&gt;
+
+&lt;body style =&quot;text-align:center;&quot;&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Formatting</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-808e-8321-da14d86f8b8b" class="numbered-list" start="1"><li>Two of the following HTML elements makes the text bold, which two?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-80d9-85a7-e0423b8c1a4e" class=""><code>&lt;strong&gt;</code> and <code>&lt;b&gt;</code></p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80a8-9c8f-c541d69bdae2" class="numbered-list" start="2"><li>Add extra importance to the word &quot;degradation&quot; in the paragraph below.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80f6-8237-c9262ea0c6e2" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+WWF&#x27;s mission is to stop the
+&lt;strong&gt;degradation&lt;/strong&gt; of our
+planet&#x27;s natural environment.
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80b7-be65-dc5a64d4c34e" class="numbered-list" start="3"><li>Emphasize the word &quot;metropolitan&quot; in the text below.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80c8-8dbb-faf14071eab6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;Tokyo&lt;/h1&gt;
+&lt;p&gt;
+Tokyo is the capital of Japan,
+the most populous &lt;em&gt;metropolitan&lt;/em&gt;
+area in the world.
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80c9-9750-f51b1f2b0e56" class="numbered-list" start="4"><li>Highlight the word &quot;FUN&quot; in the text below.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80f7-ab2a-c6df09a29a91" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+HTML is &lt;mark&gt;FUN&lt;/mark&gt; to learn!
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80dd-986e-e904b2852eeb" class="numbered-list" start="5"><li>Apply subscript formatting to the number &quot;2&quot; in the text below.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80dc-8efa-f24789621d0f" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+H&lt;sub&gt;2&lt;/sub&gt;O is the scientific term for water.
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8044-8bcd-f8e66e67cf04" class="numbered-list" start="6"><li>Add a line through (strikeout) the letters &quot;blue&quot; in the text below.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8036-8ce5-cfaaeeac7887" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+My favorite color is &lt;del&gt;blue&lt;/del&gt; red.
+&lt;/p&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Quotations</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8054-a4bc-dae0a35e4eb5" class="numbered-list" start="1"><li>Which of the following is NOT a quotation element (in fact, not an HTML element at all)?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-809b-87de-c25c3fc2bb1f" class="">&lt;quote&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80fe-8bda-eac1843aea37" class="numbered-list" start="2"><li>Use an HTML element to add quotation marks around the letters &quot;cool&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8082-849d-f83c55d32dfc" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+I am so &lt;q&gt;cool&lt;/q&gt;.
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-807b-89f5-f54896450379" class="numbered-list" start="3"><li>The text below should be a quoted section.Add the proper HTML element to it, and specify that it is quoted from the following URL:http://www.worldwildlife.org/who/index.html<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80d2-9e0a-e288f89ae29e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;
+For 50 years, WWF has been protecting the future of nature.
+The world&#x27;s leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.
+&lt;/blockquote&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-808c-b32e-d15082db46d4" class="numbered-list" start="4"><li>Change text direction. Make the text below go right-to-left.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-80af-a867-d11059e7b2a6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;bdo dir=&quot;rtl&quot;&gt;What a beautiful day!&lt;/bdo&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80dc-9f8e-eb3f2f5deb67" class="numbered-list" start="5"><li>The letters &quot;WHO&quot; in the text below is an abbreviation of &quot;World Health Organization&quot;.  Use an HTML element to provide the specified abbreviation of &quot;WHO&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8028-995b-e0ff16c41f2a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+The &lt;abbr title=&quot;World Health Organization&quot;&gt;
+WHO&lt;/abbr&gt; was founded in 1948.
+&lt;/p&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Comments</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-806b-a9ca-eb443796a87b" class="numbered-list" start="1"><li>What is the correct syntax for adding a comment in HTML?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-8091-a205-d92b29cba6ee" class="">&lt;!-- This is a comment -→</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80e5-ac08-f5cbb2e97bdf" class="numbered-list" start="2"><li>Use the HTML comment tag to make a comment out of the &quot;This is a comment&quot; text.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-8042-855a-fba0c0dcfa38" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;!-- This is a comment --&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80e3-b9cf-dbda1433f0da" class="numbered-list" start="3"><li>Add comment tags around the paragraph:<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-80c1-aa8a-c89ed285dbef" class=""><code> &lt;!--&lt;p&gt;This is a paragraph.&lt;/p&gt;--&gt; </code></p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Colors</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-80fb-8e87-f8c022994463" class="numbered-list" start="1"><li>Do you remember any legal HTML color names? Which one of the following is a legal HTML color?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-806b-bc83-ca57ca084edc" class="">Tomato</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8013-a2c6-df634c032f48" class="numbered-list" start="2"><li>Insert the correct property to make the text color violet.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f47f8a1-6682-803d-878a-f18cd70d4108" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;color: violet&quot;&gt;This is a paragraph.&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8009-abc1-c8bbbf8bcc27" class="numbered-list" start="3"><li>The Alpha channel of a color controls the color-transparency, but which of the following values will be MOST transparent?<div style="display:contents" dir="auto"><p id="2f47f8a1-6682-809c-810a-f0b5922ce156" class=""><code>background-color:rgba(255, 0, 0, 0);</code></p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><mark class="highlight-teal_background"><strong>HTML CSS</strong></mark></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f47f8a1-6682-8054-a981-f4196e8a2ceb" class="numbered-list" start="1"><li>What is a correct syntax for linking to an external stylesheet?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-8021-9b6e-eb8f54111e8d" class=""><code>&lt;link rel=&#x27;stylesheet&#x27; href=&#x27;styles.css&#x27;&gt;</code></p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8076-abb4-cd580de78ef8" class="numbered-list" start="2"><li>Use CSS to set the background color of the document (body) to yellow.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80e1-8e5e-f4f2a01005a0" class="numbered-list" start="3"><li>Use CSS to set the background color of the document (body) to yellow.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8083-b41d-d20a60a450fc" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+bode {
+background-clor:yellow;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8052-bfff-d5c1639500ee" class="numbered-list" start="4"><li>Use CSS to set the font of the document to &quot;courier&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-809a-a276-c7dc26529f2f" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {font-family:courier;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-807c-a20d-fc164d29d3e4" class="numbered-list" start="5"><li>Use CSS to set the text color of the document to red.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80b8-8e6f-cbe1b84f9dae" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80c1-91c0-d53b2f59457b" class="numbered-list" start="6"><li>Use CSS to make a yellow, 1 pixel thick, border around all paragraphs.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8004-bc94-db9c4b403aed" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p{border: 1px solid yellow;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Links</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80ec-beb4-d28b484a8c0f" class="numbered-list" start="1"><li>What is a correct syntax for an HTML hyperlink?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80bb-8dd9-f0ce9a5a0eab" class=""><code>&lt;a href=&#x27;/home.htm&#x27;&gt;Visit </code><code><a href="http://w3schools.com/">W3Schools.com</a></code><code>!&lt;/a&gt;</code></p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80c2-b320-fcb3326d78fe" class="numbered-list" start="2"><li>Use the correct HTML to make the text below into a link to &quot;default.html&quot;.<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80a8-9dfb-c98d26ae2b0d" class=""><code>&lt;a href=&quot;default.html”&gt;Visit our HTML tutorial.&lt;/a&gt;</code></p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8013-aec8-d4307f0d105b" class="numbered-list" start="3"><li>Use the correct HTML attribute to make the link open in a new window.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80d2-886a-d047ea283dcc" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;html_images.asp&quot; target=&quot;_blank&quot;&gt;HTML Images&lt;/a&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8019-bae6-eb51e85977a7" class="numbered-list" start="4"><li>Use the correct HTML to make the image become a link to &quot;default.html&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80a6-9fb2-e0d40c8a96aa" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;default.html&quot;&gt;
+&lt;img src=&quot;smiley.gif&quot;&gt;
+&lt;/a&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80e7-a51a-f40a8fbf2330" class="numbered-list" start="5"><li>Add a &quot;tooltip&quot; to the link. The &quot;tooltip&quot; should say &quot;Home&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-804c-975d-f77eaed82a9a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;default.html&quot; title=&quot;Home&quot;&gt;Back to Home&lt;/a&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Images</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80f2-9771-c5ae7787a714" class="numbered-list" start="1"><li>What is a correct HTML element for adding an image?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80a0-a05e-db19606fca65" class="">The <code>&lt;img&gt;</code> element</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-802f-bcdd-d77dd90313e5" class="numbered-list" start="2"><li>Use the HTML image attributes to set the size of the image to 250 pixels wide and 400 pixels tall.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8004-8910-edd1ff4757df" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;scream.png&quot; width=&quot;250&quot; height=&quot;400&quot;&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8096-9323-dcbfe9d98055" class="numbered-list" start="3"><li>Use CSS to set the size of the image to 250 pixels wide and 400 pixels tall.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80ad-a77c-d130b9d0dcba" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;scream.png&quot; style=&quot;width:250px;height:400px;&quot;&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80d4-a87a-c0af0b8dc353" class="numbered-list" start="4"><li>Use the correct HTML to make the image become a link to &quot;default.html&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8038-a7bd-d625f82a8c9c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;default.html&quot;&gt;
+&lt;img src=&quot;smiley.gif&quot;&gt;
+&lt;/a&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80f1-a958-e28f4b936652" class="numbered-list" start="5"><li>Make the image below float to the right of the paragraph.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-802b-8af8-d0f870e27606" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;p&gt;
+&lt;img src=&quot;smiley.gif&quot; style=&quot;float:right;&quot;&gt;
+This is a paragraph.
+This paragraph contains an image
+&lt;/p&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-806c-9e57-d303caf8a012" class="numbered-list" start="6"><li>Add the correct HTML attribute to display the &quot;smiley.gif&quot; image<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8051-a3da-e21c57049f36" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;smiley.gif&quot;&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8094-b239-cbee0e09077d" class="numbered-list" start="7"><li>Specify an alternate text for the image.The alternate text should say &quot;Smiley&quot;.Alternate text is useful when the image cannot be displayed, like when the page is read by a screen reader.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80dd-b526-da3a4db01c71" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley&quot;&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Favicon</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80fd-96d1-f661f5925582" class="numbered-list" start="1"><li>In which HTML element is the Favicon defined?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-806e-9689-e9bcad040ba3" class="">The <code>&lt;link&gt;</code> element</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80c9-82a4-c33d588f7a14" class="numbered-list" start="2"><li>Which HTML tag is used to handle the favicon (the little image to the left in the browser tab):<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8043-8ca9-f7e04d0a8ea4" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/images/favicon.ico&quot;&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80fa-83c9-eff6a043ba9e" class="numbered-list" start="3"><li>True or False. Favicons must have the <code>.ico</code> file extension.<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-803a-87a7-cbca31dc1bd5" class="">False</p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Title</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8028-bffe-e64f73e119f0" class="numbered-list" start="1"><li>In which HTML element is the page title defined?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-8077-b9bb-f46483cd8df8" class="">The <code>&lt;title&gt;</code> element</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8071-9c7a-fa44b6bf9957" class="numbered-list" start="2"><li>Consider this web page: What is the page&#x27;s title?<div style="display:contents" dir="ltr"><figure id="2f57f8a1-6682-80b1-8714-e438cd197d27" class="image"><a href="image%201.png"><img style="width:681.984375px" src="image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2f57f8a1-6682-807e-86ee-d0ad4f879134" class=""><mark class="highlight-teal_background"><strong>Answer: Welcome</strong></mark></p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8073-8bc5-e26afc759342" class="numbered-list" start="3"><li>True or False. A page should only have one <code>title</code> element.<br/>True</li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Tables</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-802b-af9d-f2a9bfdf05da" class="numbered-list" start="1"><li>What is the correct tag name for a table-cell in HTML?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-8009-a7dc-caaf9bf3c331" class="">&lt;td&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8044-a008-e2c97ab45392" class="numbered-list" start="2"><li>What is the correct tag name for a table-row in HTML?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80eb-b38a-c486f0b5dfbb" class="">&lt;tr&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-804c-9750-eda6c64dfae2" class="numbered-list" start="3"><li>Add a table row at the end of the table, with two table cells. The two table cells should have the value &quot;Eve Jackson&quot; and &quot;94&quot;.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8049-bedd-fc6352aaebb0" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jill Smith&lt;/td&gt;
+    &lt;td&gt;50&lt;/td&gt;
+  &lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Eve Jackson&lt;/td&gt;
+			&lt;td&gt;94&lt;/td&gt;
+		&lt;/tr&gt;
+&lt;/table&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Lists</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8025-a4c3-eb25894a7d46" class="numbered-list" start="1"><li>What is the correct tag name for list items?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80b0-8fd6-fce2f3216522" class="">&lt;li&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80ae-9287-c304595cf27c" class="numbered-list" start="2"><li>Which one is NOT a legal element in HTML?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80c7-b5c0-c2ff6200b130" class="">&lt;ll&gt;</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-801c-b14e-cc541c508c57" class="numbered-list" start="3"><li>True or False. The list items in ordered lists will be marked with small black circles by default.<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80e2-8557-c65d88755d6f" class="">False</p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Block and Inline</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80a3-8afe-d08098fb585b" class="numbered-list" start="1"><li>Which type of elements takes up the full width available?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-8071-a06c-e6cb2ac92443" class="">Block elements</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8002-8f15-f1eef62208e6" class="numbered-list" start="2"><li>Name one HTML block element.<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-8062-8ea9-e8a92f2eac7d" class="">div</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8039-bcb8-da34db7d039f" class="numbered-list" start="3"><li>Name one HTML inline element.<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-805b-8d77-c4dbb39b0012" class="">strong</p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Div element</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80af-8c32-ec8d19ec0811" class="numbered-list" start="1"><li>Consider the following code. How will the DIV element be aligned? <div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-8050-9ccf-e6bba24a0972" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;div style=&#x27;width:200px;margin:auto&#x27;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;/div&gt;</code></pre></div><div style="display:contents" dir="auto"><p id="2f57f8a1-6682-803d-9117-c20950c66f90" class="">Center aligned</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-805f-baba-d4ee6409069e" class="numbered-list" start="2"><li>True or False. You cannot align DIV elements side by side<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80d3-baf3-eef1d6cc2e36" class="">False</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8000-b379-f435e62182ee" class="numbered-list" start="3"><li>One of the following statements is true about the DIV element, which one?<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-803a-b0f4-d5ffae0e284a" class="">By default, DIV elements come with line breaks before and after</p></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Classes</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80e7-95f1-ce7a6b51fbac" class="numbered-list" start="1"><li>True or False. The class name is case sensitive<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80bb-a105-dd30e5b5b73e" class="">True</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80ac-87f0-f4cad3ee98fa" class="numbered-list" start="2"><li>In the &lt;style&gt; section, create a class selector named &quot;special&quot;.  Add a color property with the value &quot;blue&quot; inside the &quot;special&quot; class.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80df-b3ea-ea482b8b918d" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.special {
+  color:blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class=&quot;special&quot;&gt;My paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8074-ab33-e21803d00f92" class="numbered-list" start="3"><li>Add the correct class to make the H1 element red.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80ed-bd74-d8391aeec8f1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.mystyle {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class=&quot;mystyle&quot;&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80df-a963-fcb1cffce851" class="numbered-list" start="4"><li>Add two classes to the H1 element, to make the background pink and the color red.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-809e-9a3c-cde42a74c347" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.intro {background:pink;}
+.special {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class=&quot;intro special&quot;&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>HTML Id</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-80e5-9451-c2a493f23de4" class="numbered-list" start="1"><li>True or False. The id name is case sensitive<div style="display:contents" dir="auto"><p id="2f57f8a1-6682-80db-bf2b-c46a6d471736" class="">True </p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8096-bec5-e695f8fab067" class="numbered-list" start="2"><li>Add the correct HTML attribute to make the H1 element red.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80fc-9d3e-e43278683352" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#myheader {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=&quot;myheader&quot;&gt;My Home Page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f57f8a1-6682-8001-b7f5-f49f5c0dc21d" class="numbered-list" start="3"><li>Create an id selector named &quot;special&quot;.  Add a color property with the value &quot;blue&quot; inside the &quot;special&quot; declaration block.<div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2f57f8a1-6682-80bf-bdc5-fad260ca4a1e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#special {
+  color:blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;special&quot;&gt;My paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></li></ol></div></div></details></div><div style="display:contents" dir="auto"><p id="2f57f8a1-6682-809b-b52e-f4990187e29a" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
