@@ -1,0 +1,185 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.title-box {
+    margin-top: -81px;
+    width: 500px;
+}
+
+.title-box img {
+    width: 320.94px;
+    margin: -30px;
+}
+
+.title-box h2 {
+    color: #1c1e21;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    line-height: 32px;
+}
+
+.form-box .form-window{
+    width: 366px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: 60px;
+    box-shadow: 0 2px 4px #0000001a, 0 8px 16px #0000001a;
+}
+
+.form-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 16px;
+    color: #777777;
+    box-sizing: border-box;
+    border: 1px solid #eeebeb;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-box input:focus {
+    box-shadow: 0px 0px 1px rgb(22, 111, 229);
+    color: #9e949c;
+}
+
+.form-box button {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    background: #0866ff;
+}
+
+.form-box button:hover {
+    background: #1877f2;
+}
+
+.form-box a {
+    color: #166fe5;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box hr {
+    border: 1px solid #dadde1;
+    margin-bottom: 15px;
+}
+
+.form-box .create-btn a {
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #42b72a;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-box .create-btn a:hover {
+    text-decoration: none;
+    background: #36a420;
+}
+
+.form-box .form-subtext {
+    display: block;
+    padding-top: 15px;
+    text-align: center;
+    margin-left: 40px;
+    font-weight: 100;
+    /* width: 480px; */
+}
+
+.form-box .form-subtext a {
+    display: inline;
+    color: #000;
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: 70px;
+    background: #ffffff;
+    padding: 40px 20px;
+    font-size: 13px;
+    color: #737373;
+}
+
+.footer-container{
+    max-width: 980px;
+    margin: 0 auto;  
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+}
+
+.footer-container li {
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: 0;
+}
+.footer-container li button {
+    margin-top: -3px;
+    padding: 0 7px;
+    font: inherit;
+    font-weight: bold;
+    color: #656c7b;
+    cursor: pointer;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #737373;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.footer-container hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 12px;
+}
