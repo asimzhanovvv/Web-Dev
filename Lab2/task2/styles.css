@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Instagram Sans Regular, Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+/* ===== ОСНОВНАЯ ЧАСТЬ ===== */
+.main-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 653px;
+    align-items: center;
+}
+
+/* ===== Левая часть ===== */
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 75px;
+}
+
+.box {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box .text {
+    max-width: 680px;/*585px;*/
+    /* width: 100%; */
+    height: 250px;
+
+    font-family: Instagram Sans Regular!important;
+    font-size: 2.6em; /*45px*/
+    font-weight: 500;
+    line-height: 55px;
+    color: #0A1317;
+
+    padding-top: 1.8em;
+}
+
+.box .text .gradient-text {
+    background: linear-gradient(to right, #ff5c00, #ff0069, #d300c5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    margin-right: -10px; 
+}
+
+.mockup {
+    /* padding-top: 30px; */
+    width: 50%;
+    height: auto;
+}
+
+/* ===== Правая часть ===== */
+.side-bar {
+    position: relative;
+    border-left: 2px solid #dbdbdb;
+    color: #737373;
+    width: 100%;
+    height: 100%;
+    padding: 100px 60px;
+}
+
+.login-main{
+    text-align: left;
+    color: #0a1317;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.login-main .login-title {
+    letter-spacing: 0.02em;
+
+    font-family: Optimistic, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+
+    color: #0A1317;
+    margin-bottom: 16px;
+}
+
+.login-main input {
+    height: 60px;
+    width: auto;
+    
+
+    padding: 10px 14px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+
+    border: 1px solid #dbdbdb;
+    border-radius: 16px;
+
+    outline: none;
+    background-color: #fff;
+}
+
+.login-main input:focus,
+.login-main input:hover {
+    border-color: #5d6c7b;
+}
+
+.login-main .button {
+    width: 100%;
+    height: 44px;
+
+    border: none;
+    border-radius: 999px;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.login-main .login-btn {
+    margin-top: 7px;
+    background-color: #0064e0;
+    color: #fff;
+}
+
+.login-main .login-btn:hover {
+    background-color: #0053ba;
+}
+
+/* .login-main .login-btn:disabled {
+    background-color: #99c1f3; 
+    opacity: 0.4;
+    cursor: default;
+} */
+
+.login-main .forgot-btn {
+    background-color: #fff;
+    color: #091216;
+}
+
+.login-main .forgot-btn:hover {
+    background: #f2f2f2;
+}
+
+.login-other {
+    padding-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-other .button {
+    width: 100%;
+    height: 44px;
+
+    border-radius: 999px;
+    border: 1px solid #dbdbdb;
+
+    background: #fff;
+    color: #262626;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.login-other .button:hover {
+    background: #f2f2f2;
+}
+
+.login-other .button img {
+    width: 16px;
+    height: 16px;
+}
+
+.login-other .create-btn {
+    color: #0064e0;
+    border-color: #0064e0;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.login-other .meta-logo {
+    width: 60px;
+    /* height: auto; */
+    margin-top: 16px;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    border-top: 1px solid #dbdbdb;
+    font-size: 12px;
+    color: #737373;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+}
+
+.footer li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #737373;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .links-blok{
+    padding-top: 28px;
+}
+
+.footer-sub {
+    padding-top: 8px;
+    padding-bottom: 60px;
+}
+
+
+.lang-select {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+
+.lang-select select {
+    background: transparent;
+    border: none;
+
+    width: 70px;
+    min-width: 0;
+
+    font-size: 12px;
+    color: #737373;
+    cursor: pointer;
+}
