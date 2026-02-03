@@ -1,0 +1,514 @@
+/* Сброс стандартных отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    font-family: 'Mona Sans', 'Mona Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* Общие стили для страницы */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background-color: white;
+    color: #24292e;
+}
+
+/* ========== HEADER (Шапка сайта) ========== */
+
+.header {
+    background-color: white;
+    border-bottom: 1px solid #d0d7de;
+    padding: 16px 32px;
+}
+
+.header-container {
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ========== LOGO (Логотип) ========== */
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+    color: #24292e;
+    text-decoration: none;
+}
+
+/* Стили для SVG логотипа */
+.logo-svg {
+    fill: #24292e; 
+}
+
+.header-logo a:hover .logo-svg {
+    fill: #656d76; /* цвет при наведении */
+}
+
+/* ========== NAVIGATION (Навигация) ========== */
+
+.header-nav {
+    display: flex;
+    gap: 16px;
+    flex: 1; /* занимает всё доступное пространство между логотипом и правой частью */
+}
+
+.nav-item {
+    color: #24292e;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-item:hover {
+    color: #59636e;
+}
+
+/* Стили для SVG стрелок в навигации */
+.arrow-svg {
+    opacity: 0.6;
+    fill: currentColor;
+}
+
+.nav-item:hover .arrow-svg {
+    opacity: 1;
+}
+
+/* ========== RIGHT SECTION (Правая часть) ========== */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ========== SEARCH (Поиск) ========== */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    min-width: 270px;
+    cursor: pointer;
+}
+
+.search-container:hover {
+    border-color: #a0a8b0;
+}
+
+.search-icon-svg {
+    fill: #656d76;
+}
+
+.search-text {
+    flex: 1;
+    font-size: 14px;
+    color: #656d76;
+}
+
+.search-shortcut {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+
+    font-family: monospace;
+    font-size: 12px;
+    color: #656d76;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== DASHBOARD BUTTON (Кнопка Dashboard) ========== */
+
+.dashboard-button {
+    padding: 6px 16px;
+    background-color: white;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    color: #24292e;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dashboard-button:hover {
+    background-color: #f6f8fa;
+    border-color: #a0a8b0;
+}
+
+/* ========== MAIN CONTENT (Основное содержимое) ========== */
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ========== Промо Copilot'a ========== */
+.promo-container {
+    width: 1280px;
+    height: 308px;
+
+    padding-top: 87px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.promo-container h2 {
+    color: #1f2328;
+    font-size: 64px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    line-height: 68px;
+    letter-spacing: -1.92px;
+    text-align: center;
+}
+
+.promo-container p {
+    width: 56.45rem;
+    height: 3rem;
+    color: #656d76;
+    line-height: 24px;
+    text-align: center;
+}
+
+.promo-container button {
+    width: 205.45px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 0px;
+
+    cursor: pointer;
+    background: linear-gradient(rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), rgb(27, 31, 35);
+    color: #fff;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.promo-container button:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), rgb(27, 31, 35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========== PRICING SECTION ========== */
+
+.pricing-section {
+    margin: 80px;
+}
+
+/* GRID для карточек */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    gap: 32px; /* расстояние между карточками */
+}
+
+/* Одна карточка тарифа */
+.pricing-card {
+    background-color: #f3f5f7;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Избранная карточка (Enterprise) */
+.pricing-card-featured {
+    box-shadow: 0 8px 24px rgba(9, 105, 218, 0.12);
+    padding-top: 0;
+    position: relative;
+}
+
+/* Бейдж "RECOMMENDED" */
+.card-recom {
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 16px);
+    height: calc(100% + 42px);
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background:#0e73e8;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* ========== card-top ========*/
+.card-top {
+    width: 100%;
+    height: 290px;
+    padding: 32px 32px;
+    align-items: center;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card-header {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.plan-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.plan-description {
+    font-size: 14px;
+    color: #656d76;
+    line-height: 1.5;
+}
+
+.card-price {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.price-amount {
+    font-size: 48px;
+    font-weight: 400;
+    color: #24292e;
+}
+.dollar-sign {
+    font-size: 20px;
+    font-family: 'Mona Sans', 'Mona Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: #59698b;
+}
+
+.price-period {
+    font-size: 14px;
+    color: #656d76;
+    margin-left: 4px;
+}
+
+/* Кнопки */
+.card-button {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.card-button-primary {
+    border: none;
+    background-color: #24292e;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.card-button-primary:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), rgb(27, 31, 35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-button-secondary {
+    background-color: white;
+    color: #24292e;
+    border-color: #d0d7de;
+    margin-bottom: 24px;
+}
+
+.card-button-secondary:hover {
+    border: 3px solid #4c4c4c;
+}
+
+/* Для Enterprise - две кнопки */
+.card-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ========== card-bottom ========*/
+
+.card-bottom {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+/* Список функций */
+.feature-list {
+    list-style: none;
+}
+
+.feature-item {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #24292e;
+    border-bottom: 1px solid #f6f8fa;
+    position: relative;
+    padding-left: 24px;
+}
+
+/* Стрелочка перед функцией */
+.feature-item:before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #59636e;
+    font-weight: bold;
+}
+
+.feature-item:hover {
+    cursor: pointer;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.featured-add-ons {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2279df;
+
+    padding-top: 20px;
+    padding-left: -15px;
+}
+
+/* ========== ADD-ONS SECTION (Секция дополнений) ========== */
+
+.addons-section {
+    margin-top: 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+
+/* GRID для add-ons (3 колонки, 2 ряда) */
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Одна карточка add-on */
+.addon-card {
+    background-color: white;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.2s ease;
+}
+
+.addon-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+
+/* Иконка add-on */
+.addon-icon {
+    display: flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 624.938rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.addon-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.addon-description {
+    font-size: 14px;
+    color: #656d76;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.addon-link {
+    color: #1f2328;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Compare all features link */
+.compare-link-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.compare-link {
+    color: #0969da;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.compare-link:hover {
+    text-decoration: underline;
+}
+
+.compare-link svg {
+    fill: currentColor;
+}
+
+/* =========== Footer ======== */
+
+footer {
+    display: flex;
+    width: 70.45rem;
+    height: 5.25rem;
+    padding: 1.5rem 1rem;
+    color: #1f2328;
+    font-size: 0.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    line-height: 1.125rem;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+    gap: 1rem;
+    gap: 1rem;
+    grid-gap: 1rem;
+}
