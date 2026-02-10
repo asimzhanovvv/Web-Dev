@@ -1,0 +1,28 @@
+1) Create a function unique(arr) that should return an array with unique items of arr.
+
+  Answer:
+  function unique(arr) {
+    return Array.from(new Set(arr));
+  }
+
+2) We’d like to get an array of map.keys() in a variable and then apply array-specific methods to it, e.g. .push.
+  But that doesn’t work:
+
+  let map = new Map();
+  
+  map.set("name", "John");
+  
+  let keys = map.keys();
+  
+  // Error: keys.push is not a function
+  keys.push("more");
+
+  Why? How can we fix the code to make keys.push work?
+
+  Answer: That’s because map.keys() returns an iterable, but not an array.
+
+  let map = new Map();
+  map.set("name", "John");
+  let keys = Array.from(map.keys());
+  keys.push("more");
+  alert(keys); // name, more

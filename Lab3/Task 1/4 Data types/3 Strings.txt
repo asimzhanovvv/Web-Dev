@@ -1,0 +1,37 @@
+1) Write a function ucFirst(str) that returns the string str with the uppercased first character, for instance:
+
+  ucFirst("john") == "John";
+
+  Answer:
+  function ucFirst(str) {
+    if (!str) return str;
+  
+    return str[0].toUpperCase() + str.slice(1);
+  }
+  
+  alert( ucFirst("john") ); // John
+
+2) Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
+
+  checkSpam('buy ViAgRA now') == true
+  checkSpam('free xxxxx') == true
+  checkSpam("innocent rabbit") == false
+
+  Answer: 
+  function checkSpam(str) {
+    let lowerStr = str.toLowerCase();
+  
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+  }
+  
+  alert( checkSpam('buy ViAgRA now') );
+  alert( checkSpam('free xxxxx') );
+  alert( checkSpam("innocent rabbit") );
+
+3) We have a cost in the form "$120". That is: the dollar sign goes first, and then the number.
+   Create a function extractCurrencyValue(str) that would extract the numeric value from such string and return it.
+
+   Answer:
+   function extractCurrencyValue(str) {
+     return +str.slice(1);
+   }
