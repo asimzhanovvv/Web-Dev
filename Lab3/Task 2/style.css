@@ -9,6 +9,7 @@ body {
     background: linear-gradient(to right,#076585,#fff);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -152,4 +153,17 @@ h1 {
     border-top: 1px solid #eee;
     color: #666;
     font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.copyright:hover {
+    text-decoration: underline;
 }

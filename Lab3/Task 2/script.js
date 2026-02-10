@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const taskInput = document.getElementById('task-input');
     const addButton = document.getElementById('add-btn');
     const todoList = document.getElementById('todo-list');
-    // const totalTasksSpan = document.getElementById('total-tasks');
-    // const completedTasksSpan = document.getElementById('completed-tasks');
+    const totalTasksSpan = document.getElementById('total-tasks');
+    const completedTasksSpan = document.getElementById('completed-tasks');
 
     // Load tasks from localStorage if available
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const totalTasks = tasks.length;
         const completedTasks = tasks.filter(task => task.completed).length;
 
-        // totalTasksSpan.textContent = `Total: ${totalTasks} task${totalTasks !== 1 ? 's' : ''}`;
-        // completedTasksSpan.textContent = `Completed: ${completedTasks} task${completedTasks !== 1 ? 's' : ''}`;
+        totalTasksSpan.textContent = `Total: ${totalTasks} task${totalTasks !== 1 ? 's' : ''}`;
+        completedTasksSpan.textContent = `Completed: ${completedTasks} task${completedTasks !== 1 ? 's' : ''}`;
     }
 
     // Function to save tasks to localStorage
