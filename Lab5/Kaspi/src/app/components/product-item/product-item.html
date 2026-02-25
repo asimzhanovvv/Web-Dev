@@ -20,6 +20,13 @@
 
         <div class="product-meta">
             <span class="price">{{ product().price | number }} ₸</span>
+            <!-- <div class="rating">
+                @for (star of [1,2,3,4,5]; track star) {
+                <span (click)="setRating(star)" style="cursor:pointer">
+                    {{ star <= product().rating ? '⭐' : '☆' }} </span>
+                        }
+                        {{ product().rating }}
+            </div> -->
             <span class="rating">⭐ {{ product().rating }}</span>
         </div>
 

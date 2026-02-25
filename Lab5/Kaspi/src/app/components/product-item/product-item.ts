@@ -39,4 +39,7 @@ export class ProductItem {
       '_blank'
     );
   }
+  setRating(star: number): void {
+    this.product().rating = star;
+  }
 }
